@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Icons untuk PWA -->
+    <link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧮 Kalkulator Sederhana</h1>
+            <p class="subtitle">Aplikasi perhitungan dasar</p>
+        </header>
+
+        <main>
+            <!-- Display Kalkulator -->
+            <div class="calculator">
+                <div class="display">
+                    <div class="previous-operand" id="previous-operand"></div>
+                    <div class="current-operand" id="current-operand">0</div>
+                </div>
+
+                <!-- Tombol Kalkulator -->
+                <div class="buttons">
+                    <button class="btn span-two" data-action="clear">AC</button>
+                    <button class="btn" data-action="delete">DEL</button>
+                    <button class="btn" data-operator="÷">÷</button>
+                    
+                    <button class="btn" data-number="7">7</button>
+                    <button class="btn" data-number="8">8</button>
+                    <button class="btn" data-number="9">9</button>
+                    <button class="btn" data-operator="×">×</button>
+                    
+                    <button class="btn" data-number="4">4</button>
+                    <button class="btn" data-number="5">5</button>
+                    <button class="btn" data-number="6">6</button>
+                    <button class="btn" data-operator="-">-</button>
+                    
+                    <button class="btn" data-number="1">1</button>
+                    <button class="btn" data-number="2">2</button>
+                    <button class="btn" data-number="3">3</button>
+                    <button class="btn" data-operator="+">+</button>
+                    
+                    <button class="btn" data-number="0">0</button>
+                    <button class="btn" data-number=".">.</button>
+                    <button class="btn span-two" data-action="equals">=</button>
+                </div>
+            </div>
+
+            <!-- Riwayat Perhitungan -->
+            <div class="history">
+                <h3>📜 Riwayat</h3>
+                <ul id="history-list"></ul>
+                <button id="clear-history" class="btn-secondary">Hapus Riwayat</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Dibuat dengan ❤️ menggunakan JavaScript</p>
+            <button id="install-btn" class="install-btn">📲 Install App</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
